@@ -1,1 +1,42 @@
-<!DOCTYPE html><html><head> <title>Kevin Larmee - 044</title> <?xml version="1.0" standalone="no"?> <?xml-stylesheet type="text/css" href="style.css"?> <link href="style.css" rel="stylesheet"> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <meta name="viewport" content="width=device-width, initial-scale=1"></head><body id="painting"> <header> <a href="index.html"> <h1> <span class="truncate">Kevin</span> Larmee </h1> </a> <a id="right" href="043.html"> &lt; 043 </a> <a class="four" href="info.html#a044"> info </a><a href="045.html"> 045 &gt; </a></header>  <main><a href="044kevinlarmee.jpg"> <img src="044kevinlarmee.jpg"> </a></main> <script>window.onload = function() { const img = document.createElement("img"); img.src ="045kevinlarmee.jpg" };document.onkeydown = (event) => { if (event.key == 'ArrowLeft') {window.open("043.html", "_self");} else if (event.key == 'ArrowRight') {window.open("045.html", "_self");}};</script></body></html>
+
+        <!DOCTYPE html><html><head><title>044</title>
+        <!--?xml version='1.0' standalone='no'?-->
+        <!--?xml-stylesheet type='text/css' href='style.css'?-->
+        <link href='style.css' rel='stylesheet'>
+        <meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'></head>
+        <body><header>
+        <span id=''>
+        <a href='index.html'>Kevin Larmee</a>
+        </span>
+        <span id=''>
+        <a href='bio.html'>bio</a>
+        </span>
+        <span id='prev'>
+        <a href='043.html'>043</a>
+        </span>
+        <span id=''>
+        <a href='info.html'#a44>info</a>
+        </span>
+        <span id='next'>
+        <a href='045.html'>045</a>
+        </span></header><main id='painting'><a class='painting' href='044kevinlarmee.jpg'><img class='painting' src='044kevinlarmee.jpg'></a></main>
+<script>
+window.onload = function () { 
+    const map = {};
+    onkeydown = onkeyup = function(event) {
+        map[event.key] = event.type == 'keydown';
+    };
+    document.body.onkeydown = function(event){
+        if (event.key == 'ArrowLeft' && !map['Alt'] && !map['Meta']) {
+            window.open('043.html', '_self');
+        } else if (event.key == 'ArrowRight' && !map['Alt'] && !map['Meta']) {
+            window.open('045.html', '_self');
+        }
+    };
+    let img = document.createElement('img'); 
+    img.src = '045kevinlarmee.jpg';
+    let img2 = document.createElement('img'); 
+    img2.src = '043kevinlarmee.jpg';
+};
+</script></body></html>
