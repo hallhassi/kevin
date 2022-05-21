@@ -1,0 +1,46 @@
+* {
+ margin: 0;
+}
+nav {
+ position: absolute;
+ right: 1vw;
+ top: 1vw;
+}
+h1{
+ padding-left: 1vw;
+}
+body>div>* {
+ margin: 1vw;
+}
+body>div {
+ margin-bottom: 1em;
+}
+ol {
+ height: 0;
+ padding: 0;
+}
+main {
+ grid-template-columns: repeat(3, 33.33vw);
+ display:grid;
+}
+main>button {
+ text-align: left;
+ border: none;
+ display: grid;
+ background: none;
+}
+img {
+ width: 100%;
+ display: block;
+ margin: auto;
+}
+li {
+ list-style: none;
+ text-align: left;
+}
+div>ol {
+ height: auto;
+}
+.hide{
+ display: none;
+}
