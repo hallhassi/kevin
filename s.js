@@ -1,3 +1,4 @@
+document.addEventListener('click', e => console.log(e))
 function hide(x) {
  x.hidden = true;
  x.classList.add('hide');
