@@ -1,4 +1,3 @@
-document.addEventListener('click', e => console.log(e))
 function hide(x) {
  x.hidden = true;
  x.classList.add('hide');
@@ -162,7 +161,9 @@ document.body.addEventListener('click', e => {
  contactA.append('kevinlarmee@hotmail.com');
  contactA.href = "mailto: kevinlarmee@hotmail.com";
  cvDiv.append(contactA);
-} else if (e.target.parentNode.tagName == 'MAIN') {
+}
+});
+mainButtons.forEach((el, i) => el.addEventListener('click', e => {
  mainButtons.forEach(j => {
   j.style.gridColumn = '';
  });
@@ -170,23 +171,26 @@ document.body.addEventListener('click', e => {
  location.href = "#a" + i;                 //Go to the target element.
  history.replaceState(null,null,url);  
  //Don't like hashes. Changing it back. 
- if (e.target.querySelector('img').dataset.loaded !== 'true') {
-  e.target.querySelector('img').src = e.target.querySelector('img').src.match(/(.*)(\/small\/)([\d]+kevinlarmee\.jpg)/)[3];
-  e.target.querySelector('img').dataset.loaded = 'true';
+ if (e.currentTarget.querySelector('img').dataset.loaded !== 'true') {
+  e.currentTarget.querySelector('img').src = e.currentTarget.querySelector('img').src.match(/(.*)(\/small\/)([\d]+kevinlarmee\.jpg)/)[3];
+  e.currentTarget.querySelector('img').dataset.loaded = 'true';
  }
- if (e.target.dataset.toggle == 'on') {
-  e.target.style.gridColumn = "auto";
+ if (el.dataset.toggle == 'on') {
+  el.style.gridColumn = "auto";
   mainButtons[0].style.gridColumn = "1 / auto";
-  e.target.dataset.toggle = 'off'
+  mainButtons.querySelector(`[data-toggle='on']`).dataset.toggle = 'off'
+  el.dataset.toggle = 'off'
+  console.log('on')
  } else {
-  e.target.style.gridColumn = "1 / span 3";
+  el.style.gridColumn = "1 / span 3";
   let b;
   if ((i+1) % 3 == 0) b = 2; 
   else if ((i+1) % 3 == 1) b = 1;
   else if ((i+1) % 3 == 2) b = 3;
-  if (e.target == mainButtons[0]) e.target.style.gridColumn = "1 / span 3";
+  if (el == mainButtons[0]) el.style.gridColumn = "1 / span 3";
   else  mainButtons[0].style.gridColumn = b;
-  e.target.dataset.toggle = 'on';
+  el.dataset.toggle = 'on';
+  console.log('off')
   }
- });
+ }));
  // e.currentTarget.querySelector('img').src = e.currentTarget.querySelector('img').src.match(/(.*)(\/small\/)([\d]+kevinlarmee\.jpg)/)[3]
